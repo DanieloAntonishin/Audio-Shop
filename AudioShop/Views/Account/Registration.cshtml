@@ -1,0 +1,36 @@
+﻿@model AudioShop.Models.AccountModel;
+<div class="container product-block-top text-center">
+    <h1>Registration</h1>
+    <div class="container-fluid col-7">
+        <form asp-antiforgery="true" asp-action="Registration" asp-controller="Account">
+            <div>
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label asp-for="Login"></label><br />
+                    <input class="form-control" type="text" asp-for="Login" />
+                    <span asp-validation-for="Login"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label><br />
+                    <input class="form-control" type="password" asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword">Confirm Password</label><br />
+                    <input class="form-control" type="password" asp-for="ConfirmPassword" />
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+                <div>
+                    <br />
+                    <button type="submit" class="btn-secondary"> Registration </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

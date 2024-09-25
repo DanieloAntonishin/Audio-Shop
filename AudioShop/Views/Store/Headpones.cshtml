@@ -1,0 +1,52 @@
+﻿@model List<AudioShop.Models.ProductModel>;
+<img class="image" src="~/img/Headpones.jpg" />
+<br />
+
+<div class="album py-md-5 product-block-top">
+    <div class="container">
+    
+        <div class="card-deck">
+                @foreach (ProductModel product in Model)
+                {
+            <div class="col">
+                <div class="card mb-4 rounded-lg border-0">
+                    <img class="card-img-top image" src="@product.Image" alt="@product.Name">
+                    <div class="card-body">
+                        <h6>@product.Name</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-muted">$@product.Price</div>
+                    </div>
+                </div>
+            </div>
+
+                }
+        </div>
+           
+            <br />
+            <div class="row product-block-bottom">
+                <div class="card-deck">
+                    <div class="card rounded-lg">
+                        <div class="card-title text-center"><br /><strong>PREMIUM GIFT WRAPPING</strong></div>
+                        <div class="card-body text-center text-muted">
+                            <p class="card-text">Express your affection with our gift wrapping and a personalized message from you. </p>
+                        </div>
+                    </div>
+                    <div class="card rounded-lg">
+                        <div class="card-title text-center"><br /><strong>DELIVERY AT THE SPEED OF SOUND</strong></div>
+                        <div class="card-body text-center text-muted">
+                            <p class="card-text">Rest assured that your parcel will arrive on time. We offer express shipping on all order. </p>
+                        </div>
+                    </div>
+                    <div class="card rounded-lg">
+                        <div class="card-title text-center"><br /><strong>BRAND WARRANTY</strong></div>
+                        <div class="card-body text-center text-muted">
+                            <p class="card-text">100% Original products with brand warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<br />
+<br />

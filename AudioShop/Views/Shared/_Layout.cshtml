@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AudioShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-toggleable-xl navbar-dark mb-3 nav">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand central-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/Logo.png" class="logo" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-links-transp">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Store" asp-action="Headpones">Headpones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Privacy">Television</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Account" asp-action="SignUp">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Admin" asp-action="AdminPanel">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="basket"><img src="~/img/basket.png" /></a>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        <br />
+        <br />
+    </div>
+    <footer class="footer text-muted text-center" style="background-color:black;">
+        <div class="row">
+            <div class="col-md-6 socialNetwork">
+                <img class="" src="~/img/Logo.png" />
+                <div class="list-unstyled mb-0">
+                    <a href="#!" class="socialNetwork-link">Where to buy</a>
+                    <a href="#!" class="socialNetwork-link">Warranty</a>
+                    <a href="#!" class="socialNetwork-link">Cookie Policy</a>
+                </div>
+            </div>
+            <section class="col-md-6 socialNetwork">
+                <a class="btn btn-outline-light btn-floating m-1" href="#">
+                    <img src="~/img/facebook.png">
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#" >
+                    <img src="~/img/instagram.png">
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#" >
+                    <img src="~/img/youtube.png">
+                </a>
+                <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0);">
+                    © 2022 Copyright
+                </div>
+            </section>
+           
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

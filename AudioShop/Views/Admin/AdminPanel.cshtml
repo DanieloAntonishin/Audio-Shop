@@ -1,0 +1,82 @@
+﻿@model AudioShop.Models.ProductModel;
+<div class="container product-block-top product-block-bottom text-center">
+    <h1>Add new product</h1>
+    <br />
+    <div class="container-fluid col-6">
+        <form asp-antiforgery="true" asp-action="AdminPanel" asp-controller="Admin" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Name"></label>
+                    </div>
+                </div>
+                <div class="col-8"><input class="form-control" type="text" asp-for="Name" />    <span asp-validation-for="Name"></span><br /></div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Category"></label>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <select class="form-control" type="text" asp-for="Category">
+                        <option>Headpones</option>
+                        <option>Speaker</option>
+                        <option>Sounbar</option>
+                    </select>
+                    <span asp-validation-for="Category"></span><br />
+                </div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Price"></label>
+                    </div>
+                </div>
+                <div class="col-8">   <input class="form-control" type="number" asp-for="Price" />   <span asp-validation-for="Price"></span><br /></div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Discount"></label>
+                    </div>
+                </div>
+                <div class="col-8">   <input class="form-control" type="checkbox" asp-for="Discount" />  <span asp-validation-for="Discount"></span><br /></div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Count"></label>
+                    </div>
+                </div>
+                <div class="col-8">   <input class="form-control" type="number" asp-for="Count" />  <span asp-validation-for="Count"></span><br /></div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="Image"></label>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <input class="form-control-file" type="file" name="UploadFile"  />
+                    @*<span asp-validation-for="Image"></span>*@
+                    <br />
+                </div>
+                <br />
+                <div class="col-4">
+                    <div class="form-text">
+                        <label asp-for="About"></label>
+                    </div>
+                </div>
+                <div class="col-8"><textarea class="form-control" type="text" asp-for="About"></textarea>    <span asp-validation-for="About"></span><br /></div>
+            </div>
+            <div>
+                <button type="submit" class="btn-secondary">Add new Product</button>
+                <br />
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+</div>
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
